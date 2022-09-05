@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main: #283077;
+    --accent: gold;
+}
+
+body{
+    font-family: 'Archivo', sans-serif;
+    padding-left: 10px;
+}
+ul{
+    list-style: none;
+}
+a:link,a:visited{
+    color: var(--main);
+    text-decoration: none;
+}
+a:hover{
+    background-color: var(--main);
+    color: white;
+}
+h1,h2{
+    color: var(--main);
+    font-weight: 800;
+}
+#site-title{
+    padding: 5px 10px;
+    /* background-color: red; */
+}
+#repo-link{
+    position: fixed;
+    top: 0px;
+    right: 20px;
+}
+#name{
+    background-color: var(--main);
+    color: white;
+    width: fit-content;
+    padding: 5px 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+}
+/* #name:hover{
+    background-color: white;
+    color: navy;
+} */
+::selection{
+    background-color: var(--accent);
+}
