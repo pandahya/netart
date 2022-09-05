@@ -12,8 +12,15 @@ body{
 ul{
     list-style: none;
 }
+.ol-sub-1{
+    list-style: circle;
+}
+li{
+    padding: 5px;
+}
 a:link,a:visited{
     color: var(--main);
+    /* text-decoration: underline wavy; */
     text-decoration: none;
 }
 a:hover{
@@ -47,6 +54,19 @@ h1,h2{
     background-color: white;
     color: navy;
 } */
+
+section{
+    /* background-color: red; */
+    margin: 30px 50px;
+}
+#home-list{
+    margin: initial;
+}
+header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
+    text-decoration: none;
+}
+
+
 ::selection{
     background-color: var(--accent);
 }
