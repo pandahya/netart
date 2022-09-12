@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>lamp</title>
+</head>
+<style>
+    .lamp-lights{
+        color: white;
+    }
+    .lamp-lights::selection{
+        color: black;
+    }
+</style>
+<body>
+<pre>
+          <span class="lamp-lights">✦ ✦ ✦ ✦</span>
+          _______     
+         /       \    
+        / <span class="lamp-lights">✦ ✦ ✦ ✦</span> \   
+       / <span class="lamp-lights">✦ ✦ ✦ ✦ ✦</span> \  
+      / <span class="lamp-lights">✦ ✦ ✦ ✦ ✦ ✦</span> \ 
+     /_______________\
+      <span class="lamp-lights">✦ ✦ ✦</span> | | <span class="lamp-lights">✦</span> : <span class="lamp-lights">✦</span>
+     <span class="lamp-lights">✦ ✦ ✦ ✦</span>| |<span class="lamp-lights">✦ ✦</span>:<span class="lamp-lights">✦ ✦</span>
+            | |  <input type="checkbox" onclick="checkLight()" id="lamp-switch" name="lamp-switch" value="lighton">
+     ______/___\_______
+
+</pre>
+
+</body>
+</html>
+<script>
+const lampLights = document.getElementsByClassName("lamp-lights");
+function checkLight(){
+    let lampSwitch = document.getElementById("lamp-switch").checked;
+    if(lampSwitch){
+        for(let i=0; i<lampLights.length; i++){
+            lampLights[i].style.color = "gold";
+        }
+    }else{
+        for(let i=0; i<lampLights.length; i++){
+            lampLights[i].style.color = "white";
+        }
+    }
+}
+
+</script>
