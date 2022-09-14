@@ -7,21 +7,43 @@
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
+<style>
+    .sock{
+        visibility: hidden;
+    }
+    .sock:hover{
+        cursor: zoom-in;
+    }
+    #txt{
+        color: white;
+    }
+</style>
 <body>
     <h1>office</h1>
 <pre>
-     ____
+     ____                    <a href="./spider.html">##</a>
     |    |
     <a href="./hallway1.html">|   ∘|</a>
-    |____|
+    |____|        <a href="mousehole.html"> ☗ </a>
 
     ___
- __|___|____              ____
-|\  \___\   \            ()___)
-| \__________\            \o o|
-  |          |             \ o|
-  |          |              \o|
-                             \|
+ __<a href="https://youtu.be/IDNuz_VFJtU" target="_blank" rel="noopener noreferrer">|___|</a>____  
+|\  \___\   \               <span class="sock">__</span>
+| \__________\            <span class="sock">_| |</span>
+  |          |           <span class="sock">(|__)</span> <span id="txt">sock #4</span>
+  |          | 
 </pre>
 </body>
 </html>
+<script>
+    const sock = document.getElementsByClassName("sock");
+    const message = document.getElementById("txt");
+
+    message.addEventListener("mouseover", function showSock(){
+        for(let i=0;i<sock.length;i++){
+            sock[i].style.visibility = "visible";
+        }
+        message.style.color = "cornflowerblue";
+    })
+
+</script>

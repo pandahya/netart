@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>spider</title>
+</head>
+<style>
+    #msg{
+        visibility: hidden;
+    }
+    #something{
+        color: cornflowerblue;
+    }
+    #something:hover{
+        cursor: pointer;
+    }
+    #sock{
+        visibility: hidden;
+    }
+</style>
+<body>
+
+<pre>
+<span id="spider">    |
+    |
+  / _ \
+\_\(_)/_/
+ _//"\\_ 
+  /   \</span>
+
+<span id="msg">i have <span id="something">something</span> for you</span>
+<span id="sock">   __
+ _| |
+(|__)</span> <span id="message">sock #5</span>
+</pre>
+</body>
+</html>
+<script>
+    const msg = document.getElementById("msg");
+    const spider = document.getElementById("spider");
+    const something = document.getElementById("something");
+    const sock = document.getElementById("sock");
+    const message = document.getElementById("message");
+
+    spider.addEventListener("mouseover", function showMsg(){
+        msg.style.visibility = "visible";
+    })
+
+    something.addEventListener("click", function showSock(){
+        sock.style.visibility = "visible";
+        message.style.visibility = "visible";
+    })
+</script>

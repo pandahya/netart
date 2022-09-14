@@ -11,26 +11,27 @@
     body{
         background-color: grey;
     }
-    #message{
+    #msg{
         visibility: hidden;
     }
 </style>
 <body>
+    <a href="./bedroom.html"><p id="left-arrow">&larr;</p></a>
 <pre style="color:lawngreen;">
 
-    <span id="clover">✤</span>  <span id="message">a 4-leaf clover!</span>
+    <span id="clover">✤</span>  <span id="msg">a 4-leaf clover!</span>
 </pre>
 </body>
 </html>
 <script>
 const clover = document.getElementById("clover");
-const message = document.getElementById("message");
+const msg = document.getElementById("msg");
 
 clover.addEventListener('mouseover', function showText(){
-    message.style.visibility = "visible";
+    msg.style.visibility = "visible";
 });
 clover.addEventListener('mouseout', function hideText(){
-    message.style.visibility = "hidden";
+    msg.style.visibility = "hidden";
 });
 
 </script>

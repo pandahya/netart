@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>kitchen</title>
+</head>
+<style>
+    .fridge-open{
+        display: none;
+    }
+    #narnia{
+        display: none;
+    }
+</style>
+<body>
+<h1>kitchen</h1>
+<pre>
+
+ ____                        <span class="fridge-open"> __ _____</span> <span class="fridge-close">   _____</span><span class="fridge-open">__</span>
+/    \                       <span class="fridge-open">|  </span><span class="fridge-close">   |  |  |   </span><span class="fridge-open">|     |  |</span>
+<a href="./hallway1.html">|    |</a>                       <span class="fridge-open">|  | </span><span class="fridge-close">   | </span><span id="fridge-door">╹|</span><span id="narnia"><a href="https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia"> ✷ </a></span><span class="fridge-close">╹ |   </span><span class="fridge-open"> |  |</span>
+|____|                       <span class="fridge-open">|__|__</span><span class="fridge-close">   |__|__|</span><span class="fridge-open">___|__|</span>
+
+</pre>
+</body>
+</html>
+<script>
+    const fridgeDoor = document.getElementById("fridge-door");
+    const fridgeOpen = document.getElementsByClassName("fridge-open");
+    const fridgeClose = document.getElementsByClassName("fridge-close");
+    const narnia = document.getElementById("narnia");
+
+    fridgeDoor.addEventListener("mouseover", function openFridge(){
+        for(let i=0;i<fridgeClose.length;i++){
+            fridgeClose[i].style.display = "none";
+        }
+        fridgeDoor.style.display = "none";
+
+        for(let i=0;i<fridgeOpen.length;i++){
+            fridgeOpen[i].style.display = "inline";
+        }
+        narnia.style.display = "inline";
+    })
+</script>

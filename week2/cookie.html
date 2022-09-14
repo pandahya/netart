@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>cookie</title>
+</head>
+<style>
+    .cookie, #cookie-txt{
+        color:chocolate;
+    }
+    .sock{
+        display: none;
+    }
+    .sock:hover{
+        cursor: zoom-in;
+    }
+</style>
+<body>
+    <a href="./livingroom.html"><p id="left-arrow">&larr;</p></a>
+<pre>
+___________________
+|       <span class="cookie">___ </span><span class="sock">  __</span>      |
+|      <span class="cookie">/</span><span class="sock"> _| | </span><span class="cookie">   \ </span>     |
+|      <span class="cookie">\</span><span class="sock">(|__) </span><span class="cookie">___/ </span>     |
+|     <span id="cookie-txt">cookie</span>      |
+|     <span id="message">sock #3</span>     |
+|_________________|
+
+</pre>
+</body>
+</html>
+<script>
+    const cookieTxt = document.getElementById("cookie-txt");
+    const cookie = document.getElementsByClassName("cookie");
+    const sock = document.getElementsByClassName("sock");
+    const message = document.getElementById("message");
+
+    cookieTxt.addEventListener("mouseover",function hideCookie(){
+        cookieTxt.style.textDecoration = "line-through"; 
+        for(let i=0;i<cookie.length;i++){
+            cookie[i].style.display = "none";  
+        }
+
+        for(let i=0;i<sock.length;i++){
+            sock[i].style.display = "inline";
+        }
+        message.style.visibility = "visible";
+    })
+</script>

@@ -16,7 +16,30 @@ pre{
     margin: auto;
     width: fit-content;
 }
+p{
+    position: fixed;
+    top: 10px;
+}
+#left-arrow{
+    left: 50px;
+}
+#right-arrow{
+    right: 50px;
+}
+img{
+    width: 15rem;
+    margin: auto;
+    display: block;
+}
 ::selection{
     color: white;
     background-color: black;
+}
+
+#sock:hover{
+    cursor: zoom-in;
+}
+#message{
+    color: cornflowerblue;
+    visibility: hidden;
 }

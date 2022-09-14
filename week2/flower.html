@@ -5,22 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>flower</title>
+    <title>flowers</title>
 </head>
+<style>
+    .flower{
+        color:coral;
+    }
+    .flower:hover{
+        cursor: grab;
+    }
+    .flower:active{
+        cursor: grabbing;
+    }
+</style>
 <body>
-    <div class="center">
-        <pre>
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿ ✿
-        </pre>
-    </div>
+    <a href="./index.html"><p id="left-arrow">&larr;</p></a>
+<pre><span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+<span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span> <span class="flower">✿</span>
+</pre>
+
 </body>
 </html>
+<script>
+    const flowers = document.getElementsByClassName("flower");
+
+    for(let i=0;i<flowers.length;i++){
+        flowers[i].addEventListener("click", function pickFlower(){
+            flowers[i].style.visibility = "hidden";
+        })
+    }
+</script>
