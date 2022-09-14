@@ -18,13 +18,18 @@ pre{
 }
 p{
     position: fixed;
-    top: 10px;
 }
 #left-arrow{
+    top: 10px;
     left: 50px;
 }
 #right-arrow{
+    top: 10px;
     right: 50px;
+}
+#down-arrow{
+    bottom: 40%;
+    left: 50%;
 }
 img{
     width: 15rem;
