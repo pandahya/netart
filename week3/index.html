@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>GARF</title>
+</head>
+<body>
+    <img id="tpose" src="./assets/tpose.png">
+    <img id="lasagna" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg2.cgtrader.com%2Fitems%2F716480%2Fdd40cb0a37%2Fseafood-lasagna-3d-model-max-obj-fbx-stl-dae-dwg.jpg&f=1&nofb=1" alt="a low-poly model of lasagna, on a picnic blanket with a fork next to it">
+    <img id="garf" src="./assets/garf.png">
+</body>
+</html>
+
+<script>
+    const tpose = document.getElementById("tpose");
+    const garf = document.getElementById("garf");
+    const lasagna = document.getElementById("lasagna");
+
+    lasagna.addEventListener("mouseover", function enterGarf(){
+        tpose.style.animation = "peek-garf 1.5s infinite";
+        tpose.style.visibility = "visible";
+    })
+    lasagna.addEventListener("mouseout", function leaveGarf(){
+        tpose.style.animation = "none";
+        tpose.style.visibility = "hidden";
+    })
+
+    garf.addEventListener("mouseover", function spinGarf(){
+        garf.style.animation = "rotate-garf 1s linear infinite";
+    })
+    garf.addEventListener("mouseout", function stopGarf(){
+        garf.style.animation = "none";
+    })
+
+</script>
