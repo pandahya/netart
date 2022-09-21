@@ -4,35 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>GARF</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+    <title>spaace</title>
 </head>
 <body>
-    <img id="tpose" src="./assets/tpose.png">
-    <img id="lasagna" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg2.cgtrader.com%2Fitems%2F716480%2Fdd40cb0a37%2Fseafood-lasagna-3d-model-max-obj-fbx-stl-dae-dwg.jpg&f=1&nofb=1" alt="a low-poly model of lasagna, on a picnic blanket with a fork next to it">
-    <img id="garf" src="./assets/garf.png">
+    <h1>
+        Wellcome To The Space Spacee!!
+    </h1>
+    <h2 id="fixed">the Coolest Number 1 website in the galaxy!</h2>
+    <p id="welcome">
+        welcome fellow humans <span class='secret'>and aliens</span>, to the greatest website in the universe! the spaciest space space!
+    </p>
+    <nav>
+        <ul>
+            <li>earth</li>
+            <li>pluto is not a planet</li>
+            <li>do aliens exist</li>
+            <li>science things</li>
+            <li>astology</li>
+            <li class='secret'>wowza</li>
+        </ul>
+    </nav>
+
+    <h3>THE 6 TENETS OF LEARNING ABOUT SPACE AND THINGS</h3>
+    <ol id="tenets">
+        <li>
+            <q>do not fear the emptiness</q>
+        </li>
+        <li>
+            you don't have to be smart, but you kind of do i think that's what my mom says
+        </li>
+        <li>
+            aliens actually are real and i ahve undeniable proof
+        </li>
+        <li>
+            distinguish between venus and mars
+        </li>
+        <li>
+            the moon landing was faked
+        </li>
+        <li>
+            be curious
+        </li>
+        <li>
+            call nasa frequently
+        </li>
+    </ol>
+    <h2><a href="https://en.wikipedia.org/wiki/Space">this is a link</a></h2>
+    <figure>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2555892.jpg&f=1&nofb=1" alt="sparkly space" title="sparkly space"/>
+        <figcaption>this is a picture of stars ☞ </figcaption>
+    </figure>
+    <p id="universe">
+        what is there that we can learn about space?
+    <img id="moon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QvDMF70h0dtu4bD-xtgBbAHaHJ%26pid%3DApi&f=1" alt="a picture of the moon" title="a picture of the moon"/>
+        The shape of the universe, in physical cosmology, is the local and global geometry of the universe. The local features of the geometry of the universe are primarily described by its curvature, whereas the topology of the universe describes general global properties of its shape as of a continuous object. The spatial curvature is related to general relativity, which describes how spacetime is curved and bent by mass and energy. The spatial topology cannot be determined from its curvature, due to the fact that there exist (mathematically) locally indistinguishable spaces with different topologies.
+    </p>
 </body>
 </html>
-
-<script>
-    const tpose = document.getElementById("tpose");
-    const garf = document.getElementById("garf");
-    const lasagna = document.getElementById("lasagna");
-
-    lasagna.addEventListener("mouseover", function enterGarf(){
-        tpose.style.animation = "peek-garf 1.5s infinite";
-        tpose.style.visibility = "visible";
-    })
-    lasagna.addEventListener("mouseout", function leaveGarf(){
-        tpose.style.animation = "none";
-        tpose.style.visibility = "hidden";
-    })
-
-    garf.addEventListener("mouseover", function spinGarf(){
-        garf.style.animation = "rotate-garf 1s linear infinite";
-    })
-    garf.addEventListener("mouseout", function stopGarf(){
-        garf.style.animation = "none";
-    })
-
-</script>

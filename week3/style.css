@@ -1,28 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 body{
-    background-color: orange;
+    /* background-color:black; */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.100hdwallpapers.com%2Fwallpapers%2F3840x2160%2Fsurreal_space_astronaut_4k-hd_wallpapers.jpg&f=1&nofb=1");
+    background-size: 1000px;
+    cursor: crosshair;
+}
+h1{
+    background-color: navy;
+    color:yellow;
+    border:1px dashed chartreuse;
+    border-bottom: 5px dashed chartreuse;
+    font-family: 'Geostar Fill', cursive;
+    max-width: 850px;
+    cursor: none;
+    word-spacing: 20px;
+}
+h2{
+    background-color:darkslateblue;
+    color: white;
+    text-shadow: 5px 5px 2px pink;
+    font-family: 'Codystar', cursive;
+}
+h2:hover{
+    background-color:lightslategray;
+    height: 20px
+}
+h3{
+    background-color:darkgrey;
+    letter-spacing: 3px;
+}
+p{
+    color:lightyellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav ul{
+    display:flex;
+    background-color:mediumblue;
+    list-style-type: circle;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+nav ul li{
+    outline:2px dotted navajowhite;
+    margin: -5px;
+}
+ol{
+    background-color:aqua;
+    list-style-type: upper-roman;
+    padding: 20px 0px 10px 40px;
+    margin: 50px;
+    width:  200px;
+}
+li:hover{
+    background-color: mediumvioletred;
+    text-decoration: line-through;
+}
+img{
+    width:110vw;
+    border-radius: 1em;
+    opacity: 0.8;
+}
+figcaption{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:greenyellow;
+    position: relative;
+    top: -50px;
+    left: -10px;
+}
+a:link,a:visited{
+    background-color: mediumblue;
+    color:firebrick;
+    text-decoration:overline;
+}
+a:hover{
+    background-color: sienna;
+    color:lightyellow;
+    text-decoration: line-through;
+    font-size: 2em;
+    padding: 10px;
+}
+.secret{
+    display: none;
+}
+#fixed{
+    position:fixed;
+    z-index: 5;
+    top:20vh;
+    left: 20vw;
+}
+#welcome{
+    margin-left: 50%
+}
+#tenets{
+    height: 100px;
+    border-radius: 20px;
+    overflow: scroll;
+    quotes: "«" "»" "‹" "›";
+    box-shadow: -4px 3px 10px chartreuse;
+    cursor: help;
+}
+#moon{
+    display:inline;
+    width:50px;
+}
+#universe{
+    text-align:center;
+}
+::selection{
+    background-color: lightyellow;
 }
 
-#tpose{
-    width: 10rem;
-    visibility: hidden;
+@media only screen and (max-width:1100px){
+    *{
+        display: none;
+    }
 }
-#lasagna{
-    width: 5rem;
-    cursor: pointer;
+@media only screen and (max-width:1050px){
+    *{
+        display: revert;
+    }
+    figure img{
+        width:40vw;
+    }
 }
-#garf{
-    margin: auto;
-    width: 5rem;
-    display: block;
+@media only screen and (max-width:1000px){
+    *{
+        display: none;
+    }
 }
-
-@keyframes peek-garf{
-    0% {transform: translateX(-200px);}
-    75%{transform: translateX(10px);}
-    100%{transform: translateX(-200px);}
+@media only screen and (max-width:950px){
+    *{
+        display: revert;
+    }
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: chartreuse;
+        background-image: none;
+    }
+    h1,h2,h3,p,a:link,a:visited,li,figcaption{
+        font-family: inherit;
+        background-color: navy;
+        color: chartreuse;
+    }
+    .tenets{
+        overflow: none;
+        width: fit-content;
+    }
 }
-
-@keyframes rotate-garf{
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
+@media only screen and (max-width:900px){
+    *{
+        display: none;
+    }
+}
+@media only screen and (max-width:850px){
+    *{
+        display: revert;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.100hdwallpapers.com%2Fwallpapers%2F3840x2160%2Fsurreal_space_astronaut_4k-hd_wallpapers.jpg&f=1&nofb=1");
+    }
+    h1{
+        background-color: navy;
+        color:yellow;
+        font-family: 'Geostar Fill', cursive;
+    }
+    h2{
+        background-color:darkslateblue;
+        color: white;
+        font-family: 'Codystar', cursive;
+    }
+    h2:hover{
+        background-color:lightslategray;
+    }
+    h3{
+        background-color:darkgrey;
+    }
+    p{
+        color:lightyellow;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    nav ul{
+        background-color: white;
+    }
+    nav ul li{
+        background-color: revert;
+        outline:2px dotted navajowhite;
+    }
+    li{
+        color: inherit;
+    }
+    ol li{
+        background-color: revert;
+    }
+    figure img{
+        width:90vw;
+    }
+    figcaption{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color:greenyellow;
+    }
+    a:link,a:visited{
+        background-color: mediumblue;
+        color:firebrick;
+    }
+    .secret{
+        display: block;
+    }
+}
+@media only screen and (max-width:800px){
+    *{
+        display: none;
+    }
+}
+@media only screen and (max-width:750px){
+    *{
+        display: revert;
+    }
+    body{
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2019%2F09%2F14428-outer-space-planets.jpg&f=1&nofb=1");
+        background-size: 100px;
+    }
+    nav ul{
+        background-color: blueviolet;
+        display: block;
+        width: 10em;
+        margin: 10px;
+        padding: 10px;
+    }
+    nav ul li{
+        margin: 10px;
+        padding: 10px;
+    }
+    .secret{
+        display: none;
+    }
+    #tenets{
+        background-color: coral;
+        width: 100%;
+        box-shadow: -5px 5px 20px coral, 5px -5px 20px chartreuse;
+    }
+}
+@media only screen and (max-width:700px){
+    *{
+        display: none;
+    }
+}
+@media only screen and (max-width:650px){
+    *{
+        display: revert;
+    }
+    h1{
+        font-size: 1.5em;
+        font-family: Helvetica, sans-serif;
+    }
+    figure img{
+        width: 100px;
+    }
+    figcaption{
+        float: right;
+    }
+    #tenets{
+        background-color: coral;
+        width: 80vw;
+        box-shadow: -5px 5px 20px coral, 5px -5px 20px chartreuse;
+        overflow: none;
+        height: fit-content;
+    }
+    #universe{
+        font-family: cursive;
+    }
+}
+@media only screen and (max-width:600px){
+    *{
+        display: none;
+    }
+}
+@media only screen and (max-width:550px){
+    *{
+        display: revert;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+    }
+    #fixed{
+        font-size: 5em;
+        top: 10%;
+        left: 0;
+    }
+}
+@media only screen and (max-width:500px){
+    *{
+        display: none;
+    }
+}
+@media only screen and (max-width: 450px){
+    *{
+        display: revert;
+    }
 }
