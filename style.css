@@ -61,12 +61,10 @@ h1,h2,h3{
 
 section{
     /* background-color: red; */
-    margin: 30px 50px;
+    margin: 20px 50px;
 }
 #home-list{
-    margin: initial;
     display: flex;
-    padding-left: 1em;
     width: 50vw;
     justify-content: space-between;
     /* background-color: grey; */
