@@ -3,183 +3,245 @@ body {
     background: rgb(244, 214, 219);
     font-family: monospace;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .kitty-maker {
-padding: 1rem;
-height: calc(100vh - 2rem);
-position: relative;
+    padding: 1rem;
+    height: calc(100vh - 2rem);
+    position: relative;
 }
 
 /* cat styles */
 .cat-container {
-width: 200px;
-height: 200px;
-position: absolute;
+    width: 200px;
+    height: 200px;
+    position: absolute;
 }
 
 .cat-container.static {
-position: relative;
+    position: relative;
 }
 
 .cat-speech-bubble {
-border: 2px solid #333;
-color: #333;
-background: #fff;
-padding: 0.5rem 0.875rem;
-border-radius: 15px;
-margin-bottom: 0.5rem;
+    border: 2px solid #333;
+    color: #333;
+    background: #fff;
+    padding: 0.5rem 0.875rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
 }
 
 .cat {
-width: 100%;
-position: absolute;
-cursor: grab;
+    width: 100%;
+    position: absolute;
+    cursor: grab;
 }
 
 .cat-head-wrapper {
-width: 70px;
-height: 50px;
-position: relative;
+    width: 70px;
+    height: 50px;
+    position: relative;
 }
 
 .cat-head {
-width: 100%;
-height: 100%;
-border-radius: 25% 25% 50% 50%;
-background: orange;
-position: relative;
-display: grid;
-justify-items: center;
-align-items: center;
-top: 10px;
-z-index: 3;
+    width: 100%;
+    height: 100%;
+    border-radius: 25% 25% 50% 50%;
+    background: orange;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    top: 10px;
+    z-index: 3;
 }
 
 .cat-face {
--webkit-user-select: none;  
--moz-user-select: none;    
--ms-user-select: none;      
-user-select: none;
-margin-top: -10px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    margin-top: -10px;
 }
 
 .cat-ear-l,
 .cat-ear-r {
-position: absolute;
-top: -11px;
-width: 20px;
-height: 30px;
-/* make triangles */
-background: conic-gradient( 
+    position: absolute;
+    top: -11px;
+    width: 20px;
+    height: 30px;
+    /* make triangles */
+    background: conic-gradient( 
+        at 50% 50%,
+        transparent 135deg,
+        orange 0,
+        orange 225deg,
+        transparent 0
+        )
+        no-repeat;
+}
+
+.cat-ear-l {
+    left: 0;
+}
+
+.cat-ear-r {
+    right: 0;
+}
+
+.cat-body {
+    width: 180px;
+    height: 60px;
+    background: orange;
+    border-radius: 20px 50px 50px 50px;
+    position: relative;
+    top: -10px;
+    z-index: 2;
+}
+
+.paw {
+    width: 15px;
+    height: 60px;
+    background: orange;
+    transform: rotateZ(0deg);
+    border-radius: 50px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.paw-1 {
+    left: 5%;
+}
+
+.paw-2 {
+    left: 17.5%;
+}
+
+.paw-3 {
+    left: 50%;
+}
+
+.paw-4 {
+    left: 62.5%;
+}
+
+.cat-tail {
+    background: orange;
+    width: 80px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transform: rotateZ(120deg);
+}
+
+/* calico-cat styles */
+.calico .cat-body {
+    background: black;
+}
+
+.calico .cat-tail {
+    background: orange;
+}
+
+.calico .cat-head {
+    background: white;
+}
+
+.calico .paw {
+    background: white;
+}
+
+.calico .paw-2 {
+    background: orange;
+}
+
+/* tail animation styles */
+.aggro .cat-tail {
+    animation: wag 2s infinite;
+}
+
+@keyframes wag {
+    0% {
+        transform: rotateZ(120deg);
+    }
+
+    50% {
+        transform: rotateZ(90deg);
+    }
+
+    100% {
+        transform: rotateZ(120deg);
+    }
+}
+
+/* runaway cat animation styles */
+.cat-container {
+    top: 0;
+    left: 0;
+    transition: top 1s, left 1s;
+}
+
+.invisible .cat-body, .invisible .cat-tail, .invisible .cat-head, .invisible .paw, .invisible .paw-2{
+    background: transparent;
+    outline: 1px black dotted;
+}
+.invisible .cat-ear-l, .invisible .cat-ear-r{
+    background: conic-gradient( 
     at 50% 50%,
     transparent 135deg,
-    orange 0,
-    orange 225deg,
+    white 0,
+    white 225deg,
     transparent 0
     )
     no-repeat;
 }
 
-.cat-ear-l {
-left: 0;
+.lightgrey .cat-body, .lightgrey .cat-tail, .lightgrey .cat-head, .lightgrey .paw, .lightgrey .paw-2{
+    background: lightgrey;
+}
+.lightgrey .cat-ear-l, .lightgrey .cat-ear-r{
+    background: conic-gradient( 
+    at 50% 50%,
+    transparent 135deg,
+    lightgrey 0,
+    lightgrey 225deg,
+    transparent 0
+    )
+    no-repeat;
 }
 
-.cat-ear-r {
-right: 0;
+.white .cat-body, .white .cat-tail, .white .cat-head, .white .paw, .white .paw-2{
+    background: white;
+}
+.white .cat-ear-l, .white .cat-ear-r{
+    background: conic-gradient( 
+    at 50% 50%,
+    transparent 135deg,
+    white 0,
+    white 225deg,
+    transparent 0
+    )
+    no-repeat;
 }
 
-.cat-body {
-width: 180px;
-height: 60px;
-background: orange;
-border-radius: 20px 50px 50px 50px;
-position: relative;
-top: -10px;
-z-index: 2;
+.grey .cat-body, .grey .cat-tail, .grey .cat-head, .grey .paw, .grey .paw-2{
+    background: grey;
+}
+.grey .cat-ear-l, .grey .cat-ear-r{
+    background: conic-gradient( 
+    at 50% 50%,
+    transparent 135deg,
+    grey 0,
+    grey 225deg,
+    transparent 0
+    )
+    no-repeat;
 }
 
-.paw {
-width: 15px;
-height: 60px;
-background: orange;
-transform: rotateZ(0deg);
-border-radius: 50px;
-position: absolute;
-bottom: -20px;
-}
-
-.paw-1 {
-left: 5%;
-}
-
-.paw-2 {
-left: 17.5%;
-}
-
-.paw-3 {
-left: 50%;
-}
-
-.paw-4 {
-left: 62.5%;
-}
-
-.cat-tail {
-background: orange;
-width: 80px;
-height: 20px;
-border-radius: 50px;
-position: absolute;
-top: 30px;
-right: 10px;
-transform: rotateZ(120deg);
-}
-
-/* calico-cat styles */
-.calico .cat-body {
-background: black;
-}
-
-.calico .cat-tail {
-background: orange;
-}
-
-.calico .cat-head {
-background: white;
-}
-
-.calico .paw {
-background: white;
-}
-
-.calico .paw-2 {
-background: orange;
-}
-
-/* tail animation styles */
-.aggro .cat-tail {
-animation: wag 2s infinite;
-}
-
-@keyframes wag {
-0% {
-    transform: rotateZ(120deg);
-}
-
-50% {
-    transform: rotateZ(90deg);
-}
-
-100% {
-    transform: rotateZ(120deg);
-}
-}
-
-/* runaway cat animation styles */
-.cat-container {
-top: 0;
-left: 0;
-transition: top 1s, left 1s;
+img{
+    width: 50px;
+    margin-top: 10px;
 }
