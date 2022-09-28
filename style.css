@@ -8,15 +8,19 @@
 body{
     font-family: 'Archivo', sans-serif;
     padding-left: 10px;
+    /* background-color: black; */
 }
 ul{
     list-style: none;
+    padding-left: 0em;
+    /* background-color: orange; */
 }
 .ol-sub-1{
     list-style: circle;
 }
 li{
     padding: 5px;
+    /* background-color: green; */
 }
 a:link,a:visited{
     color: var(--main);
@@ -27,7 +31,7 @@ a:hover{
     background-color: var(--main);
     color: white;
 }
-h1,h2{
+h1,h2,h3{
     color: var(--main);
     font-weight: 800;
 }
@@ -61,6 +65,11 @@ section{
 }
 #home-list{
     margin: initial;
+    display: flex;
+    padding-left: 1em;
+    width: 50vw;
+    justify-content: space-between;
+    /* background-color: grey; */
 }
 header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
     text-decoration: none;
@@ -70,3 +79,18 @@ header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
 ::selection{
     background-color: var(--accent);
 }
+
+/* @media (prefers-color-scheme: dark){
+    :root{
+        --main: #5a63b6;
+        --accent: gold;
+    }
+    body{
+        background-color: black;
+    }
+}
+@media (prefers-color-scheme: light){
+    body{
+        background-color: white;
+    }
+} */
