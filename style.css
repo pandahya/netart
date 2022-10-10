@@ -78,9 +78,9 @@ header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
     background-color: var(--accent);
 }
 
-/* @media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark){
     :root{
-        --main: #5a63b6;
+        --main: cornflowerblue;
         --accent: gold;
     }
     body{
@@ -91,4 +91,4 @@ header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
     body{
         background-color: white;
     }
-} */
+}
