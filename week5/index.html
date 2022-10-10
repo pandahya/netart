@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>i'm hungry</title>
+</head>
+<body>
+    <figure id="bread"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fbread-slice-picture-id519474969%3Fk%3D6%26m%3D519474969%26s%3D612x612%26w%3D0%26h%3DsCsDSbjVtF09UfK03qzne5LzPfcv_Lr5QSy64Lsgwvw%3D&f=1&nofb=1&ipt=ad2e2b59c65ade4781d034ae6d5c8096b24129e533930cfbe3cbc002334edea0&ipo=images" alt="an image of a slice of white bread"></figure>
+    <h2>&rarr;</h2>
+</body>
+</html>
+<script>
+    const bread = document.querySelector("#bread");
+
+    bread.addEventListener("click", addHam);
+
+    function addHam(){
+        const ham = document.createElement("img");
+        let hamCheese = rng(1,3);
+        console.log(hamCheese);
+        if(hamCheese == 1){
+            ham.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.imgur.com%2FkbWqiO8.png&f=1&nofb=1&ipt=745a3e197431bd7455f28f0bd15bee582bcc09225fea12af6ea74b3b07af83e7&ipo=images";
+        }else{
+            ham.src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngmart.com%2Ffiles%2F8%2FCheese-PNG-Image-Free-Download.png&f=1&nofb=1&ipt=02c833768cd18464eee3f55e08a5d31f405746d07faea29d6da9461c5489c0d9&ipo=images";
+        }
+        
+        ham.classList.add("ham");
+        let randomX = (((window.innerWidth)/2)-300) + rng(-150,150);
+        let randomY = rng(-90,150);
+        ham.style.left = `${randomX}px`;
+        ham.style.top = `${randomY}px`;
+        bread.appendChild(ham);
+    }
+
+    const rarr = document.querySelector("h2");
+    rarr.addEventListener("click", spin);
+
+    function spin(){
+        bread.classList.add("spin");
+        setTimeout(goNext, 3000);
+    }
+    function goNext(){
+        window.location.href = "page.html";
+    }
+    //helper functions
+    function rng(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+</script>
