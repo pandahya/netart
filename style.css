@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
+/* :root{
+    --background: white;
     --main: #283077;
     --accent: gold;
-}
+} */
 
 body{
     font-family: 'Archivo', sans-serif;
     padding-left: 10px;
-    /* background-color: black; */
+    background-color: var(--background);
 }
 ul{
     list-style: none;
@@ -46,7 +47,7 @@ h1,h2,h3{
 }
 #name{
     background-color: var(--main);
-    color: white;
+    color: var(--background);
     width: fit-content;
     padding: 5px 10px;
     text-align: center;
@@ -80,15 +81,20 @@ header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
 
 @media (prefers-color-scheme: dark){
     :root{
-        --main: cornflowerblue;
+        --background: black;
+        --main: dodgerblue;
         --accent: gold;
     }
-    body{
-        background-color: black;
-    }
+    /* :root{
+        --background: white;
+        --main: #283077;
+        --accent: gold;
+    } */
 }
 @media (prefers-color-scheme: light){
-    body{
-        background-color: white;
+    :root{
+        --background: white;
+        --main: #283077;
+        --accent: gold;
     }
 }
