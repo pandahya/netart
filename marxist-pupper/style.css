@@ -1,0 +1,31 @@
+.generator-button {
+  position: fixed;
+  width: 300px;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  left: calc(50% - 150px);
+}
+
+.dog {
+  width: 300px;
+  position: absolute;
+}
+
+.dog-quote {
+  border-radius: 2rem;
+  background: #fff;
+  border: 2px solid #333;
+  padding: 1rem;
+  position: relative;
+  top: 20px;
+}
+
+.dog-quote p {
+  margin: 0;
+}
+
+
+.dog img {
+  display: block;
+  width: 100%;
+}
