@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>dragrecipes</title>
+</head>
+<body>
+    <!-- https://www.w3schools.com/howto/howto_js_draggable.asp -->
+    <article class="smrecipe draggable">
+        <h2>recipe 1</h2>
+        <p>this is the recipe</p>
+        <p id="recipe1-go" class="recipe-go"><a href="recipe1.html">this one</a></p>
+    </article>
+    <article class="smrecipe draggable">
+        <h2>recipe 2</h2>
+        <p>this is the recipe</p>
+        <p id="recipe1-go" class="recipe-go">this one</p>
+    </article>
+    <article class="smrecipe draggable">
+        <h2>recipe 3</h2>
+        <p>this is the recipe</p>
+        <p id="recipe1-go" class="recipe-go">this one</p>
+    </article>
+</body>
+</html>
+<script>
+    const draggables = document.getElementsByClassName("draggable");
+
+    for(let i=0;i<draggables.length; i++){
+
+        dragElement(draggables[i]);
+
+        function dragElement(elmnt){
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    }
+
+</script>

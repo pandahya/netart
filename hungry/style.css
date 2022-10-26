@@ -13,15 +13,7 @@
 body{
     background-color: var(--background);
     color: var(--main);
-    overflow: hidden;
     font-family: 'Inter Tight', sans-serif;
-}
-h2{
-    text-align: center;
-    left: 50vw;
-    bottom: 5vh;
-    position: fixed;
-    z-index: 20;
 }
 p{
     color: var(--main);
@@ -41,7 +33,44 @@ a:hover{
     position: absolute;
     margin: 10px auto;
     width: 600px;
-    /* mix-blend-mode: multiply; */
+}
+
+.smrecipe{
+    background-color: var(--main);
+    color: var(--background);
+    display: inline-block;
+    padding: 10px 10px 100px 10px;
+    /* width: 150px;
+    height: 200px; */
+    outline: 2px solid var(--background);
+}
+.smrecipe p{
+    color: var(--background);
+}
+.recipe-go{
+    position: absolute;
+    padding: 2px 5px;
+    background-color: var(--accent);
+    border-radius: 5px;
+    bottom: 15px;
+}
+.recipe-go a:hover{
+    background-color: var(--main);
+    color: var(--background);
+}
+.recipe-go:hover{
+    background-color: var(--main);
+    outline: 1px solid var(--accent);
+}
+.recipe-go:hover::after{
+    content: " →";
+}
+.draggable{
+    position: absolute;
+    cursor: grab;
+}
+.draggable:active{
+    cursor: grabbing;
 }
 
 .spin{
