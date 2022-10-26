@@ -10,10 +10,12 @@ body{
     font-family: 'Archivo', sans-serif;
     padding-left: 10px;
     background-color: var(--background);
+    color: var(--main);
 }
 ul{
     list-style: none;
     padding-left: 0em;
+    color: var(--text);
     /* background-color: orange; */
 }
 .ol-sub-1{
@@ -21,6 +23,7 @@ ul{
 }
 li{
     padding: 5px;
+    color: var(--text);
     /* background-color: green; */
 }
 a:link,a:visited{
@@ -30,7 +33,7 @@ a:link,a:visited{
 }
 a:hover{
     background-color: var(--main);
-    color: white;
+    color: var(--background);
 }
 h1,h2,h3{
     color: var(--main);
@@ -83,18 +86,15 @@ header a:link, header a:visited, #back-arr a:link, #back-arr a:visited{
     :root{
         --background: black;
         --main: dodgerblue;
+        --text: white;
         --accent: gold;
     }
-    /* :root{
-        --background: white;
-        --main: #283077;
-        --accent: gold;
-    } */
 }
 @media (prefers-color-scheme: light){
     :root{
         --background: white;
         --main: #283077;
+        --text: black;
         --accent: gold;
     }
 }

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background: black;
+    --main: white;
+    --accent: cornflowerblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    color: var(--main);
+    overflow: hidden;
+    font-family: 'Inter Tight', sans-serif;
+}
+h2{
+    text-align: center;
+    left: 50vw;
+    bottom: 5vh;
+    position: fixed;
+    z-index: 20;
+}
+p{
+    color: var(--main);
+}
+a:link, a:visited{
+    color: var(--main);
+    text-decoration: none;
+}
+a:hover{
+    background-color: var(--accent);
+}
+#bread{
+    width: min-content;
+    margin: 50px auto;
+}
+.ham{
+    position: absolute;
+    margin: 10px auto;
+    width: 600px;
+    /* mix-blend-mode: multiply; */
+}
+
+.spin{
+    animation: spinAnimate 1s linear infinite;
+}
+
+@keyframes spinAnimate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+::selection{
+    background-color: var(--background);
+    color: var(--background);
+}

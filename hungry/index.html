@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>i'm hungry</title>
+</head>
+<style>
+    :root{
+        --background: white;
+        --main: black;
+    }
+    figure{
+        width: 300px;
+        height: 300px;
+        outline: solid var(--main) 2px;
+        margin: 0 auto;
+    }
+    #enter{
+        display: block;
+        text-align: center;
+        margin: 350px auto -150px auto;
+        visibility: hidden;
+    }
+    #menu{
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+    #menu:hover{
+        cursor: pointer;
+    }
+    #contents{
+        outline: solid black 2px;
+        visibility: hidden;
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        height: fit-content;
+        width: 200px;
+    }
+    #contents p, #contents h3{
+        margin-left: 20px;
+    }
+    #contents a:hover{
+        background-color: var(--background);
+        color: var(--accent);
+    }
+    #contents a:hover::before{
+        content: "→";
+    }
+</style>
+<body>
+    <p id="enter"><a href="imhungry.html">ENTER &uarr;</a></p>
+    <figure>
+        <img src="">
+    </figure>
+
+    <p id="menu">•••</p>
+
+    <div id="contents">
+        <h3>contents</h3>
+        <p><a href="maybeishould.html">maybeishould</a></p>
+        <p><a href="whatishunger.html">whatishunger</a></p>
+        <p><a href="../food-api/index.html">recipe generator</a></p>
+        <p><a href="hamncheese.html">hamncheese</a></p>
+    </div>
+</body>
+</html>
+<script>
+    const enter = document.querySelector("#enter");
+    const menu = document.querySelector("#menu");
+    const contents = document.querySelector("#contents");
+    // let contentsOpenSession = sessionStorage.getItem("contentsOpen");
+
+    setTimeout(showEnter, 5000);
+    function showEnter(){
+        enter.style.visibility = "visible";
+        // console.log(sessionStorage.getItem("contentsOpen"))
+    };
+
+    //WORK OUT SESSION STORAGE AND ASYNC FUNCTIONS TO KEEP MENU TOGGLE OPEN
+    // async function checkSessionStorage(){
+    //     if(contentsOpenSession == true){
+    //         // contents.style.visibility = "visible";
+    //         console.log("visible");
+    //     }else if(contentsOpenSession == false){
+    //         // contents.style.visibility = "hidden";
+    //         console.log("hidden");
+    //     };
+    //     console.log(contentsOpenSession);
+    // }
+    
+
+    // if(contentsOpenSession)
+    menu.addEventListener("click", toggleContents);
+    function toggleContents(){
+        let contentsStyle = window.getComputedStyle(contents);
+        if(contentsStyle.visibility == "hidden"){
+            contents.style.visibility = "visible";
+            sessionStorage.setItem("contentsOpen", "true");
+        }else{
+            contents.style.visibility = "hidden";
+            sessionStorage.setItem("contentsOpen", "false");
+        };
+        
+    };
+</script>
